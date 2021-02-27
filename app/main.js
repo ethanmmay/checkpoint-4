@@ -5,11 +5,11 @@ import TimeController from "./Controllers/TimeController.js";
 import TaskController from "./Controllers/TaskController.js";
 
 class App {
-  weatherController = new WeatherController()
-  quoteController = new QuoteController()
-  imageController = new ImageController()
-  timeController = new TimeController()
-  taskController = new TaskController
+  weatherController = new WeatherController();
+  quoteController = new QuoteController();
+  imageController = new ImageController();
+  timeController = new TimeController();
+  taskController = new TaskController();
 }
 
 window["app"] = new App();

@@ -8,11 +8,11 @@ export default class Task {
 
     get Template() {
         return /*html*/ `
-        <div class="ml-2 mb-2">
-            ${this.description}
-            <div class="w-50 ml-5 d-inline">
-                <button class="task-item-button btn btn-dark ${this.completed ? 'text-success' : 'text-info'}" onclick="app.taskController.toggle('${this}')">${this.completed ? '✓' : '!'}</button>
-                <button class="task-item-button btn btn-dark text-danger" onclick="app.taskController.delTask('${this._id}')">X</button>
+        <div class="d-flex justify-content-between align-items-center m-1">
+            <div class="d-inline">${this.description}</div>
+            <div class="d-inline">
+                <button class="task-item-button btn ${this.completed ? 'text-dark btn-success' : 'text-info btn-dark border-gray'}" onclick="app.taskController.toggle('${this._id}')"><strong>✓</strong></button>
+                <button class="task-item-button btn ${this.completed ? 'text-dark btn-danger' : 'text-danger btn-dark border-gray'}" onclick="app.taskController.delTask('${this._id}')"><strong>X</strong></button>
             </div>
         </div>
         `

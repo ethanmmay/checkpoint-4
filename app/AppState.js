@@ -1,5 +1,9 @@
-import { EventEmitter } from "./Utils/EventEmitter.js"
-import { isValidProp } from "./Utils/isValidProp.js"
+import {
+  EventEmitter
+} from "./Utils/EventEmitter.js"
+import {
+  isValidProp
+} from "./Utils/isValidProp.js"
 import Task from "./Models/Task.js"
 
 class AppState extends EventEmitter {
@@ -11,6 +15,7 @@ class AppState extends EventEmitter {
 
   /** @type {Task[]} */
   tasks = []
+  completecount = 0
 
 
 }
