@@ -5,31 +5,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/style/main.css">
     <title>checkpoint-4</title>
 </head>
 
-<body>
+<body class="inspire">
     <header>
     </header>
     <main class="container-fluid font-custom">
-        <div id="app"></div>
-        <div class="col-3">
+        <div class="row bg-img text-light" id="bg-img">
 
-        </div>
-        <div class="col-6">
+            <!-- Left Side -->
+            <div class="col-3">
+                <div class="vh-67"></div>
+                <!-- Bottom of Left -->
+                <div class="vh-33 d-flex align-items-end pb-2">
+                    <div id="fullImage">Full Image</div>
+                </div>
+            </div>
 
-        </div>
-        <div class="col-3">
+            <!-- Middle -->
+            <div class="col-6 text-center">
+                <div class="vh-33"></div>
+                <!-- Middle of Middle -->
+                <div class="vh-33 d-flex justify-content-center align-items-center">
+                    <div>
+                        <h1 id="timer">13:30</h1><br>
+                        <h1 id="greeting">Good Morning, User</h1>
+                    </div>
+                </div>
+                <!-- Bottom of Middle -->
+                <div class="vh-33 d-flex justify-content-center align-items-end" id="quote">
+                </div>
+            </div>
 
+            <!-- Right Side -->
+            <div class="col-3">
+                <!-- Top of Right -->
+                <div class="vh-33" id="weather"></div>
+                <div class="vh-33"></div>
+                <!-- Bottom of Right -->
+                <div class="vh-33 d-flex align-items-end justify-content-end pb-5">
+                    <div class="bg-dark-transparent border border-dark rounded mb-3 text-light p-3">
+                        <form class="form-inline d-flex justify-content-center"
+                            onsubmit="app.taskController.addTask(event)">
+                            <div class="form-group w-100">
+                                <input type="text" name="description" id="description" class="form-control w-75"
+                                    placeholder="Add Task" aria-describedby="helpId" minlength="3" maxlength="10">
+                                <button type="submit" class="btn btn-dark text-light">+</button>
+                            </div>
+                        </form><br>
+                        <div class="w-100 bg-dark-transparent p-2" id="tasksArea">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+
     </main>
     <footer>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="app/main.js" type="module"></script>
 </body>
 

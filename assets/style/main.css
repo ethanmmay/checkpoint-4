@@ -7,6 +7,51 @@
  */
 .font-custom {
   font-family: 'Nunito Sans', sans-serif;
+  text-shadow: 2px 2px 0px var(--dark);
+}
+
+.inspire {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.bg-dark-transparent {
+  background-color: #272727c5;
+}
+
+.vh-33 {
+  height: 33vh;
+}
+
+.vh-67 {
+  height: 67vh;
+}
+
+.bg-img {
+  background-size: cover;
+}
+
+input[type=text] {
+  background-color: var(--dark);
+  border: 1px solid rgb(124, 124, 124);
+  color: var(--light);
+}
+
+button {
+  border: 1px solid rgb(124, 124, 124) !important;
+}
+
+.task-item-button {
+  width: 36px !important;
+  height: 28px !important;
+  font-size: 12px !important;
+  text-align: center;
+}
+
+input[type=color] {
+  background-color: var(--dark);
+  width: 15px;
+  height: 38px;
 }
 
 :root {
