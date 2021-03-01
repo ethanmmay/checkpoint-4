@@ -43,9 +43,10 @@ class TaskService {
             task.completed = !task.completed
             ProxyState.tasks.splice(ProxyState.tasks.findIndex(t => t._id == id), 1, task)
             ProxyState.tasks = ProxyState.tasks
+            await apiTODO.put(`${id}`, task)
             this.countComplete()
-            await apiTODO.delete(id)
-            apiTODO.post('', new Task(task))
+            // await apiTODO.delete(id)
+            // apiTODO.post('', new Task(task))
         } catch (error) {
             console.error(error);
         }
@@ -54,6 +55,7 @@ class TaskService {
     countComplete() {
         ProxyState.completecount = 0
         ProxyState.tasks.forEach(t => t.completed ? ProxyState.completecount++ : ProxyState.completecount = ProxyState.completecount)
+        
     }
 
 }

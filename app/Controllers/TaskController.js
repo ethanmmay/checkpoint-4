@@ -38,6 +38,7 @@ export default class TaskController {
         description: event.target.description.value
       }
       taskService.addTask(rawTask)
+      event.target.reset()
     }
   }
 
